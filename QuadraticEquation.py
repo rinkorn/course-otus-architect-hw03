@@ -30,7 +30,7 @@ class QuadraticEquation:
             raise ParamAZeroError
 
         roots = []
-        if discr > 0:
+        if discr > EPS:
             root0 = (-b + (discr) ** 0.5) / (2 * a)
             root1 = (-b - (discr) ** 0.5) / (2 * a)
             roots.append(min(root0, root1))
